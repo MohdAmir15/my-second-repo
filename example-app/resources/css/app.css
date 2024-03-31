@@ -90,9 +90,7 @@
   color: #111111;
 }
 
-.note .note-buttons {
-  opacity: 0;
-}
+
 
 .note:hover .note-buttons {
   opacity: 1;
