@@ -1,4 +1,4 @@
-<x-layout>
+<x-app-wlayout>
     <div class="note-container single-note">
         <div class="note-header">
             <h1>{{$note->created_at}}</h1>
@@ -17,4 +17,4 @@
             {{$note->note}}
         </div>
     </div>
-</x-layout>
+</x-app-wlayout>

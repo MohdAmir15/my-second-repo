@@ -7,14 +7,10 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
-
 .note-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centers items horizontally */
-  justify-content: center; /* Centers items vertically */
+  max-width: 980px;
+  margin: 0 auto;
 }
-
 .new-note-btn {
   width: 200px;
   display: block;
@@ -29,36 +25,31 @@
   font-family: 'Caveat', cursive;
   text-align: center;
   text-decoration: none;
-  color: #1e1e1e;
+  color: #1e1e1e
 }
-
 .new-note-btn:hover {
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
 }
-
 .new-note-btn:active {
   position: relative;
   top: 1px;
 }
-
 .notes {
   display: flex;
-  justify-content: space-around; /* Spread notes evenly */
+  justify-content: center;
   flex-wrap: wrap;
   margin: 0 auto;
-  max-width: 900px; /* Adjusted max-width to accommodate three notes per row */
 }
-
 .note {
   background-color: #f0c806;
   border-radius: 8px;
-  width: calc(33.33% - 20px); /* Calculated width for three notes per row */
+  width: 280px;
   margin: 0 10px 20px;
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
   transition: all 0.5s;
   cursor: pointer;
   text-decoration: none;
-  color: #1e1e1e;
+  color: #1e1e1e
 }
 
 .note .note-body {
@@ -67,16 +58,13 @@
   font-size: 24px;
   padding: 10px 16px 16px;
 }
-
 .notes .note:hover {
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
 }
-
 .single-note .note {
   margin: 0;
   width: 100%;
 }
-
 .single-note .note .note-body {
   background-color: transparent;
   width: 100%;
@@ -85,17 +73,15 @@
   resize: none;
   padding: 20px;
 }
-
 .single-note .note .note-body::placeholder {
-  color: #111111;
+  color: #111111
 }
-
-
-
-.note:hover .note-buttons {
+.note .note-buttons {
+  opacity: 0;
+}
+.note:hover .note-buttons{
   opacity: 1;
 }
-
 .note-buttons {
   text-align: right;
   padding: 10px;
@@ -116,7 +102,6 @@
   display: inline-block;
   font-size: 16px;
 }
-
 .note-buttons .note-cancel-button:hover {
   background-color: #ffffff;
 }
@@ -133,7 +118,6 @@
   display: inline-block;
   font-size: 16px;
 }
-
 .note-buttons .note-submit-button:hover {
   background-color: #704300;
 }
@@ -144,38 +128,39 @@
   justify-content: space-between;
 }
 
-/* Updated colors for view, edit, and delete buttons */
-.note-buttons .note-edit-button,
-.note-buttons .note-delete-button {
+
+.note-buttons .note-edit-button {
   padding: 6px 10px;
   border-radius: 4px;
   color: white;
-  background-color: #006bd6; /* Blue color for edit button */
-  border: 1px solid #0059b3; /* Blue border color for edit button */
+  background-color: #006bd6;
+  border: 1px solid #0059b3;
   transition: all 0.3s;
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  text-align: center; /* Center text horizontally */
-  line-height: 1; /* Ensure text is vertically centered */
+}
+.note-buttons .note-edit-button:hover {
+  background-color: #0059b3;
 }
 
-/* Hover state for edit and delete buttons */
-.note-buttons .note-edit-button:hover,
-.note-buttons .note-delete-button:hover {
-  background-color: #0059b3; /* Darker blue color for edit button on hover */
-}
 
 .note-buttons .note-delete-button {
-  background-color: #c93f3f; /* Red color for delete button */
-  border: 1px solid #a82f2f; /* Red border color for delete button */
+  padding: 6px 10px;
+  border-radius: 4px;
+  color: white;
+  background-color: #c93f3f;
+  border: 1px solid #a82f2f;
+  transition: all 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
-
 .note-buttons .note-delete-button:hover {
-  background-color: #a82f2f; /* Darker red color for delete button on hover */
+  background-color: #a82f2f;
 }
-
 .note-date {
   margin-top: 20px;
   font-size: 13px;
@@ -188,5 +173,5 @@
   background-color: rgb(0, 165, 44);
   color: white;
   border-radius: 4px;
-  margin-bottom: 30px;
+  margin-bottom: 30px;;
 }
